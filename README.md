@@ -2,12 +2,15 @@
 
 REQUIRES COMMON INFORMATION MODEL 4.14+ with properly populated signature_id field!
 
-Version 1.4 of Windows Event Code Security Analysis app for Splunk. Direct questions to brodsky@splunk.com.
+Version 1.4 of Windows Event Code Security Analysis app for Splunk. Direct questions to @james_brodsky on Twitter.
+As of January 2022 I have left Splunk and am employed at Okta, but happy to maintain this app as time permits.
+
 Thanks to all security researchers that provided public info on event code recommendations - sources for this
 are linked from the Lookup Overview page, Count of Codes by Authority panel.
 
 If you want a .spl version of this look in the root of this repo - removed temporarily but will put it back soon!
-(5-17-21: have been asked by several to get this on Splunkbase - will do that shortly...)
+
+01-30-22: Merged in addition of JSCU-NL Logging Essentials guidance, thank you David Andre!
 
 05-17-21: Added Defender event codes to lookup; fixed readme format. Thank you Drew Church!
 

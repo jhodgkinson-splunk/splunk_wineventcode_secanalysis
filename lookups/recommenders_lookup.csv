@@ -10,4 +10,4 @@ JP-CERT,https://www.jpcert.or.jp/english/pub/sr/20170612ac-ir_research_en.pdf
 ASD,https://www.cyber.gov.au/acsc/view-all-content/publications/windows-event-logging-and-forwarding
 Splunk UBA,https://docs.splunk.com/Documentation/UBA/latest/GetDataIn/WindowsEvents
 Sygnia Golden SAML,https://www.sygnia.co/golden-saml-advisory
-NL JSCU,https://github.com/JSCU-NL/logging-essentials
+JSCU-NL,https://github.com/JSCU-NL/logging-essentials
