@@ -1,4 +1,4 @@
-<dashboard>
+<dashboard version="1.1">
   <label>All Lookups</label>
   <row>
     <panel>
@@ -23,7 +23,7 @@
       <title>logon_failure_lookup.csv</title>
       <table>
         <search>
-          <query>| inputlookup logon_failure_lookup.csv</query>
+          <query>| inputlookup logon_failure_lookup</query>
           <earliest>-24h@h</earliest>
           <latest>now</latest>
           <sampleRatio>1</sampleRatio>

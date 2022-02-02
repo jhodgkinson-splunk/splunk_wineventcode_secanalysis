@@ -1,4 +1,4 @@
-<form hideFilters="true">
+<form hideFilters="true" version="1.1">
   <label>Lookup Overview</label>
   <description>Select one or more Authorities using the filter</description>
   <fieldset submitButton="false">
@@ -163,7 +163,7 @@
       <title>Count of Codes by Authority ($numselected$ selected)</title>
       <table>
         <search>
-          <query>|inputlookup WindowsEventCodes |search ec_guidance*=0 OR ($authority_token$)| fields ec_*| fields - ec_guidance_cim_tagged,ec_guidance_other | addcoltotals ec_* | tail 1| rename ec_guidance_asd as "ASD",ec_guidance_fortuna as "Andrea Fortuna",ec_guidance_jpcert as "JP-CERT",ec_guidance_gough as "Michael Gough",ec_guidance_lombardi as "Mike Lombardi",ec_guidance_ms as "Microsoft AD", ec_guidance_nsa as NSA,ec_guidance_huntersforge_ossem as "Hunters Forge",ec_guidance_sans_forensics as "SANS Forensics Guidance", ec_guidance_uba as "Splunk UBA", ec_guidance_gsaml as "Golden SAML", ec_guidance_jscu as "JSCU-NL" |transpose |rename column as Category| sort - "row 1" | rename "row 1" as "Total EventCodes" | lookup recommenders_lookup.csv Category | search Category !=ec_guidance*</query>
+          <query>|inputlookup WindowsEventCodes |search ec_guidance*=0 OR ($authority_token$)| fields ec_*| fields - ec_guidance_cim_tagged,ec_guidance_other | addcoltotals ec_* | tail 1| rename ec_guidance_asd as "ASD",ec_guidance_fortuna as "Andrea Fortuna",ec_guidance_jpcert as "JP-CERT",ec_guidance_gough as "Michael Gough",ec_guidance_lombardi as "Mike Lombardi",ec_guidance_ms as "Microsoft AD", ec_guidance_nsa as NSA,ec_guidance_huntersforge_ossem as "Hunters Forge",ec_guidance_sans_forensics as "SANS Forensics Guidance", ec_guidance_uba as "Splunk UBA", ec_guidance_gsaml as "Golden SAML", ec_guidance_jscu as "JSCU-NL" |transpose |rename column as Category| sort - "row 1" | rename "row 1" as "Total EventCodes" | lookup recommenders_lookup Category | search Category !=ec_guidance*</query>
           <earliest>-24h@h</earliest>
           <latest>now</latest>
           <sampleRatio>1</sampleRatio>

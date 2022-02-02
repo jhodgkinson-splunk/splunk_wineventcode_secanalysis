@@ -1,4 +1,4 @@
-<form>
+<form version="1.1">
   <label>Recommended Events Treemap</label>
   <description>Which events exist in my data that are recommended by various authorities to collect? (Uses Event Signatures DM)</description>
   <fieldset submitButton="true" autoRun="false">
@@ -61,7 +61,7 @@
       <viz type="treemap_app.treemap">
         <search>
           <query>|tstats summariesonly=true dc(host) as NumHosts values(source) as Source count from datamodel=Event_Signatures where (($index_token$ OR $indexwc_token$) AND ($source_token$)) by Signatures.signature_id | rename Signatures.signature_id as EventCode
-| inputlookup append=t WindowsEventCodes.csv
+| inputlookup append=t WindowsEventCodes
 | stats values(*) as * by EventCode
 | addtotals ec_*
 | eval Total=Total-1
