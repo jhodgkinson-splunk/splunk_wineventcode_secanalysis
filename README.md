@@ -2,6 +2,9 @@
 
 REQUIRES COMMON INFORMATION MODEL 4.14+ with properly populated signature_id field!
 
+12-23-22: I have returned to Splunk and will be updating this app soon to include some new sources!
+Then, perhaps finally get this on Splunkbase.
+
 Version 1.4 of Windows Event Code Security Analysis app for Splunk. Direct questions to @james_brodsky on Twitter.
 As of January 2022 I have left Splunk and am employed at Okta, but happy to maintain this app as time permits.
 
