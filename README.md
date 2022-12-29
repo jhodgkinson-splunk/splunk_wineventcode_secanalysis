@@ -2,16 +2,18 @@
 
 REQUIRES COMMON INFORMATION MODEL 4.14+ with properly populated signature_id field!
 
-12-23-22: I have returned to Splunk and will be updating this app soon to include some new sources!
-Then, perhaps finally get this on Splunkbase.
-
-Version 1.4 of Windows Event Code Security Analysis app for Splunk. Direct questions to @james_brodsky on Twitter.
-As of January 2022 I have left Splunk and am employed at Okta, but happy to maintain this app as time permits.
+Version 1.5 of Windows Event Code Security Analysis app for Splunk. Direct questions to @james_brodsky on Twitter.
+Or, to brodsky@splunk.com.
 
 Thanks to all security researchers that provided public info on event code recommendations - sources for this
 are linked from the Lookup Overview page, Count of Codes by Authority panel.
 
-If you want a .spl version of this look in the root of this repo - removed temporarily but will put it back soon!
+If you want a .spl version of this look in the root of this repo. Yes, I need to get this on Splunkbase.
+
+12-29-22: Added Michel de CREVOISIER's work as an additional piece of guidance, as well as extended the MITRE ATT&CK
+mappping from his work to the previous ATT&CK mapping in this app. There are now 84 events with new MITRE Tactics and Techniques in two new fields in the main lookup (pipe delimited) and the amount of events mapped to MITRE have increased from 96 to 131. You can drill from a new panel in the Lookup Overview to see the tactics and techniques details.
+
+12-23-22: I have returned to Splunk and will be updating this app soon to include some new sources!
 
 01-30-22: Merged in addition of JSCU-NL Logging Essentials guidance, thank you David Andre!
 
