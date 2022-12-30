@@ -1,4 +1,4 @@
-<form>
+<form version="1.1">
   <label>Individual Event Code Analysis</label>
   <search id="baseSearch">
     <query>
