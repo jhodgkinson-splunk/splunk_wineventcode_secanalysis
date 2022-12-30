@@ -11,7 +11,7 @@ are linked from the Lookup Overview page, Count of Codes by Authority panel.
 If you want a .spl version of this look in the root of this repo. Yes, I need to get this on Splunkbase.
 
 12-29-22: Added Michel de CREVOISIER's work as an additional piece of guidance, as well as extended the MITRE ATT&CK
-mappping from his work to the previous ATT&CK mapping in this app. There are now 84 events with new MITRE Tactics and Techniques in two new fields in the main lookup (pipe delimited) and the amount of events mapped to MITRE have increased from 96 to 131. You can drill from a new panel in the Lookup Overview to see the tactics and techniques details. Also added new sourcetype selection to one of the dashboards and merged in changes to pass appinspect (Thanks, Shay Harding!)
+mappping from his work to the previous ATT&CK mapping in this app. There are now 84 events with new MITRE Tactics and Techniques in two new fields in the main lookup (pipe delimited) and the amount of events mapped to MITRE have increased from 96 to 131. You can drill from a new panel in the Lookup Overview to see the tactics and techniques details. Also added new sourcetype selection to one of the dashboards and merged in changes to pass appinspect (Thanks, Shay Harding!) NOTE: There's a .sql version of the app in the root of the repo but I haven't tested it fully and it doesn't include Shay's merges yet.
 
 12-23-22: I have returned to Splunk and will be updating this app soon to include some new sources!
 
