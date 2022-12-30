@@ -30,7 +30,7 @@
       <choice value="*">ALL</choice>
       <default>*</default>
     </input>
-     <input type="multiselect" token="index_token">
+    <input type="multiselect" token="index_token">
       <label>Indexes</label>
       <valuePrefix>index=</valuePrefix>
       <delimiter> OR </delimiter>
@@ -48,7 +48,7 @@
       <label>Index Wildcard</label>
       <prefix>index=</prefix>
       <default>wildcard_pattern</default>
-      </input>
+    </input>
     <input type="text" token="ec_token">
       <label>Event Code</label>
       <default>4688</default>
@@ -57,7 +57,9 @@
       <label>Sourcetype</label>
       <choice value="wineventlog*">wineventlog</choice>
       <choice value="xmlwineventlog*">xmlwineventlog</choice>
+      <choice value="*eventlog*">wineventlog AND xmlwineventlog</choice>
       <default>wineventlog*</default>
+      <initialValue>wineventlog*</initialValue>
     </input>
   </fieldset>
   <row>

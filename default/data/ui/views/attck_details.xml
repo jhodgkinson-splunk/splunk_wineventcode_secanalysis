@@ -1,0 +1,27 @@
+<form>
+  <label>ATT&amp;CK Details</label>
+  <fieldset submitButton="false">
+    <input type="text" token="EventCode" searchWhenChanged="true">
+      <label>Event Code</label>
+    </input>
+  </fieldset>
+  <row>
+    <panel>
+      <table>
+        <search>
+          <query>|inputlookup WindowsEventCodes | search EventCode=$EventCode$ | fields - ec_guidance_cim_tagged | rex mode=sed field="ATT&amp;CK_Technique" "s/\|/\n/g" | rex mode=sed field="ATT&amp;CK_Tactic" "s/\|/\n/g" | table EventCode,"Event Log",EventDescription,ATT&amp;CK_* | rename EventCode as "Event Code",EventDescription as "Event Description"</query>
+          <earliest>-24h@h</earliest>
+          <latest>now</latest>
+          <sampleRatio>1</sampleRatio>
+        </search>
+        <option name="count">20</option>
+        <option name="dataOverlayMode">none</option>
+        <option name="drilldown">none</option>
+        <option name="percentagesRow">false</option>
+        <option name="rowNumbers">false</option>
+        <option name="totalsRow">false</option>
+        <option name="wrap">true</option>
+      </table>
+    </panel>
+  </row>
+</form>
