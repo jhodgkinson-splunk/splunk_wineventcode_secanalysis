@@ -2,7 +2,7 @@
 
 REQUIRES COMMON INFORMATION MODEL 4.14+ with properly populated signature_id field!
 
-Version 1.5.1 of Windows Event Code Security Analysis app for Splunk. Direct questions to @james_brodsky on Twitter.
+Version 1.5.2 of Windows Event Code Security Analysis app for Splunk. Direct questions to @james_brodsky on Twitter.
 Or, to brodsky@splunk.com.
 
 Thanks to all security researchers that provided public info on event code recommendations - sources for this
