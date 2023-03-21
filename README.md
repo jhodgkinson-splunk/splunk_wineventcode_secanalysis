@@ -10,6 +10,8 @@ are linked from the Lookup Overview page, Count of Codes by Authority panel.
 
 If you want a .spl version of this look in the root of this repo. Yes, I need to get this on Splunkbase.
 
+3-21-23: Added another version of this app in .spl format in the root of this repo that passes appinspect.
+
 1-6-23: Drew Church merged in another fix to ensure app passes appinspect.
 
 12-29-22: Added Michel de CREVOISIER's work as an additional piece of guidance, as well as extended the MITRE ATT&CK
