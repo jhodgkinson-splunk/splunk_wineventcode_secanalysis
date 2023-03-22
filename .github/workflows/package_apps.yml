@@ -22,7 +22,7 @@ jobs:
           mv metadata/ windows-event-code-security-analysis-for-splunk
           mv static/ windows-event-code-security-analysis-for-splunk
           mv README.md windows-event-code-security-analysis-for-splunk
-          COPYFILE_DISABLE=1 tar  --exclude='.*' czf windows-event-code-security-analysis-for-splunk.tgz windows-event-code-security-analysis-for-splunk
+          COPYFILE_DISABLE=1 tar czf windows-event-code-security-analysis-for-splunk.tgz --exclude='.*'  windows-event-code-security-analysis-for-splunk/
       - uses: "marvinpinto/action-automatic-releases@latest"
         with:
           repo_token: "${{ secrets.GITHUB_TOKEN }}"
