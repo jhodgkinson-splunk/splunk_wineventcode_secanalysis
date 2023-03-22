@@ -1,0 +1,34 @@
+---
+
+name: "Package App"
+
+"on":
+  push:
+
+jobs:
+  install:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@v3
+
+      - name: Package the app
+        run: |
+          mkdir windows-event-code-security-analysis-for-splunk
+          mv appserver/ windows-event-code-security-analysis-for-splunk
+          mv bin/ windows-event-code-security-analysis-for-splunk
+          mv default/ windows-event-code-security-analysis-for-splunk
+          mv lookups/ windows-event-code-security-analysis-for-splunk
+          mv metadata/ windows-event-code-security-analysis-for-splunk
+          mv static/ windows-event-code-security-analysis-for-splunk
+          mv README.md windows-event-code-security-analysis-for-splunk
+          COPYFILE_DISABLE=1 tar czf --exclude='.*' windows-event-code-security-analysis-for-splunk.tgz windows-event-code-security-analysis-for-splunk
+      - uses: "marvinpinto/action-automatic-releases@latest"
+        with:
+          repo_token: "${{ secrets.GITHUB_TOKEN }}"
+          automatic_release_tag: "latest"
+          prerelease: true
+          title: "App Packages"
+          files: |
+            ./*.tgz
+        if: ${{ github.ref == 'refs/heads/master' }}
