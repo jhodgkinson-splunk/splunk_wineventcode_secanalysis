@@ -1,12 +1,15 @@
 ---
-
 name: "Package App"
+
+# this requires github actions to have read/write permissions in the repository
+# go to https://github.com/<username>/<repo>/settings/actions
+# look for "workflow permissions"
 
 "on":
   push:
 
 jobs:
-  install:
+  package:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repo
@@ -23,7 +26,8 @@ jobs:
           mv static/ windows-event-code-security-analysis-for-splunk
           mv README.md windows-event-code-security-analysis-for-splunk
           COPYFILE_DISABLE=1 tar czf windows-event-code-security-analysis-for-splunk.tgz --exclude='.*'  windows-event-code-security-analysis-for-splunk/
-      - uses: "marvinpinto/action-automatic-releases@latest"
+      - name: "Push to releases"
+        uses: "marvinpinto/action-automatic-releases@latest"
         with:
           repo_token: "${{ secrets.GITHUB_TOKEN }}"
           automatic_release_tag: "latest"
